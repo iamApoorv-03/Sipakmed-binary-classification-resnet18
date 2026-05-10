@@ -26,7 +26,13 @@ data loading → augmentation → ResNet-18 fine-tuning → evaluation (ROC-AUC 
   - acc=0.9918, precision=0.9918, sensitivity=0.9878, specificity=0.9945, f1=0.9898
 
 ## How to run
-Open and run the notebook:
-- `sipakmed_resnet18_pipeline.ipynb`
+1) (Optional) Prepare dataset splits / folder structure:
+- `data_prep_sipakmed.ipynb`
 
-> Note: Paths in the notebook refer to Google Drive locations used in Colab. Update `PREP_ROOT` to your local dataset path if running outside Colab.
+2) Train + evaluate ResNet-18:
+- `Train_Resnet18.ipynb`
+
+> Note: Paths in the notebooks refer to Google Drive locations used in Colab. Update `PREP_ROOT` to your local dataset path if running outside Colab.
+
+## Sanity check
+- Verified no filename overlap across train/val/test splits (train∩val=0, train∩test=0, val∩test=0).
